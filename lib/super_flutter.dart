@@ -2,7 +2,7 @@ library super_flutter;
 
 import 'package:flutter/material.dart';
 import 'package:super_flutter/super_flutter.dart';
-import 'package:super_localizations/super_localizations.dart';
+export 'package:super_localizations/super_localizations.dart';
 export 'package:super_repository/super_repository.dart';
 
 part 'error/failures.dart';
