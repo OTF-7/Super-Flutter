@@ -3,7 +3,7 @@ part of '../super_flutter.dart';
 abstract class Failure {
   static String exceptionToMessage(Exceptions exception) {
     switch (exception.runtimeType) {
-      case ServerException:
+      case InternalServerErrorException:
         return exception.message ??
             SuperTranslations.of(
                     SuperFlutter.navigatorKey.currentState!.context)!
@@ -33,12 +33,12 @@ abstract class Failure {
             SuperTranslations.of(
                 SuperFlutter.navigatorKey.currentState!.context)!
                 .errorNotFoundException;
-      case InvalidException:
+      case NotAcceptableException:
         return exception.message ??
             SuperTranslations.of(
                 SuperFlutter.navigatorKey.currentState!.context)!
                 .errorInvalidException;
-      case ExpireException:
+      case GoneException:
         return exception.message ??
             SuperTranslations.of(
                 SuperFlutter.navigatorKey.currentState!.context)!
@@ -55,7 +55,7 @@ abstract class Failure {
                 SuperFlutter.navigatorKey.currentState!.context)!
                 .errorPasswordException;
 
-      case UnauthenticatedException:
+      case UnauthorizedException:
         return exception.message ??
             SuperTranslations.of(
                 SuperFlutter.navigatorKey.currentState!.context)!
