@@ -1,50 +1,60 @@
 part of '../super_flutter.dart';
 
 abstract class Failure {
-  static String exceptionToMessage(Exceptions exception) {
+  static String exceptionToMessage(Exceptions exception, BuildContext context) {
     switch (exception.runtimeType) {
       case InternalServerErrorException:
-        return exception.message ?? SuperTranslations.of.errorServerException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorServerException;
       case ConflictException:
-        return exception.message ?? SuperTranslations.of.errorConflictException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorConflictException;
       case CacheException:
-        return exception.message ?? SuperTranslations.of.errorCacheException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorCacheException;
       case NoContentException:
-        return exception.message ?? SuperTranslations.of.errorEmptyException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorEmptyException;
       case ConnectionException:
         return exception.message ??
-            SuperTranslations.of.errorConnectionException;
+            AppLocalizations.of(context)!.errorConnectionException;
       case NotFoundException:
-        return exception.message ?? SuperTranslations.of.errorNotFoundException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorNotFoundException;
       case NotAcceptableException:
-        return exception.message ?? SuperTranslations.of.errorInvalidException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorInvalidException;
       case GoneException:
-        return exception.message ?? SuperTranslations.of.errorExpireException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorExpireException;
 
       case UserExistsException:
         return exception.message ??
-            SuperTranslations.of.errorUserExistsException;
+            AppLocalizations.of(context)!.errorUserExistsException;
       case PasswordException:
-        return exception.message ?? SuperTranslations.of.errorPasswordException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorPasswordException;
 
       case UnauthorizedException:
         return exception.message ??
-            SuperTranslations.of.errorUnauthenticatedException;
+            AppLocalizations.of(context)!.errorUnauthenticatedException;
 
       case ForbiddenException:
         return exception.message ??
-            SuperTranslations.of.errorUnexpectedException;
+            AppLocalizations.of(context)!.errorUnexpectedException;
       case BlockedException:
-        return exception.message ?? SuperTranslations.of.errorBlockedException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorBlockedException;
       case EmptyException:
-        return exception.message ?? SuperTranslations.of.errorEmptyException;
+        return exception.message ??
+            AppLocalizations.of(context)!.errorEmptyException;
 
       case CustomException:
         return exception.message ??
-            SuperTranslations.of.errorUnexpectedException;
+            AppLocalizations.of(context)!.errorUnexpectedException;
       default:
         return exception.message ??
-            SuperTranslations.of.errorUnexpectedException;
+            AppLocalizations.of(context)!.errorUnexpectedException;
     }
   }
 }

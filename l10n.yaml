@@ -2,5 +2,3 @@ arb-dir: lib/languages
 template-arb-file: language_en.arb
 output-dir: lib/translations
 output-localization-file: super_flutter_localizations.dart
-output-class: SuperLocalizations
-synthetic-package: false

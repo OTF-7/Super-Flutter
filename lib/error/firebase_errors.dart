@@ -30,67 +30,67 @@ abstract class FirebaseErrors {
   static const kFederatedUserIDAlreadyLinked =
       "FEDERATED_USER_ID_ALREADY_LINKED";
 
-  static String getMessage(message) {
+  static String getMessage(message, BuildContext context) {
     if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kTooManyRequests)) {
-      return SuperTranslations.of.firebaseInvalidCustomToken;
+      return AppLocalizations.of(context)!.firebaseInvalidCustomToken;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kInvalidCustomToken)) {
-      return SuperTranslations.of.firebaseInvalidCustomToken;
+      return AppLocalizations.of(context)!.firebaseInvalidCustomToken;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kCredentialMismatch)) {
-      return SuperTranslations.of.firebaseCredentialMismatch;
+      return AppLocalizations.of(context)!.firebaseCredentialMismatch;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kInvalidEmail)) {
-      return SuperTranslations.of.firebaseInvalidEmail;
+      return AppLocalizations.of(context)!.firebaseInvalidEmail;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kTokenExpired)) {
-      return SuperTranslations.of.firebaseTokenExpired;
+      return AppLocalizations.of(context)!.firebaseTokenExpired;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kUserDisabled)) {
-      return SuperTranslations.of.firebaseUserDisabled;
+      return AppLocalizations.of(context)!.firebaseUserDisabled;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kUserNotFound)) {
-      return SuperTranslations.of.firebaseUserNotFound;
+      return AppLocalizations.of(context)!.firebaseUserNotFound;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kInvalidRefreshToken)) {
-      return SuperTranslations.of.firebaseInvalidRefreshToken;
+      return AppLocalizations.of(context)!.firebaseInvalidRefreshToken;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kInvalidGrantType)) {
-      return SuperTranslations.of.firebaseInvalidGrantType;
+      return AppLocalizations.of(context)!.firebaseInvalidGrantType;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kMissingRefreshToken)) {
-      return SuperTranslations.of.firebaseMissingRefreshToken;
+      return AppLocalizations.of(context)!.firebaseMissingRefreshToken;
     } else if (message
             .toString()
             .toUpperCase()
@@ -101,25 +101,25 @@ abstract class FirebaseErrors {
             .toUpperCase()
             .replaceAll('-', '_')
             .contains(kEmailAlreadyInUse)) {
-      return SuperTranslations.of.firebaseEmailExists;
+      return AppLocalizations.of(context)!.firebaseEmailExists;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kOperationNotAllowed)) {
-      return SuperTranslations.of.firebaseOperationNotAllowed;
+      return AppLocalizations.of(context)!.firebaseOperationNotAllowed;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kTooManyAttemptsTryLater)) {
-      return SuperTranslations.of.firebaseTooManyAttemptsTryLater;
+      return AppLocalizations.of(context)!.firebaseTooManyAttemptsTryLater;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kEmailNotFound)) {
-      return SuperTranslations.of.firebaseEmailNotFound;
+      return AppLocalizations.of(context)!.firebaseEmailNotFound;
     } else if (message
             .toString()
             .toUpperCase()
@@ -130,49 +130,49 @@ abstract class FirebaseErrors {
             .toUpperCase()
             .replaceAll('-', '_')
             .contains(kWrongPassword)) {
-      return SuperTranslations.of.firebaseInvalidPassword;
+      return AppLocalizations.of(context)!.firebaseInvalidPassword;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kInvalidIDPResponse)) {
-      return SuperTranslations.of.firebaseInvalidIDPResponse;
+      return AppLocalizations.of(context)!.firebaseInvalidIDPResponse;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kExpiredOOBCode)) {
-      return SuperTranslations.of.firebaseExpiredOOBCode;
+      return AppLocalizations.of(context)!.firebaseExpiredOOBCode;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kInvalidOOBCode)) {
-      return SuperTranslations.of.firebaseInvalidOOBCode;
+      return AppLocalizations.of(context)!.firebaseInvalidOOBCode;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kInvalidIDToken)) {
-      return SuperTranslations.of.firebaseInvalidIDToken;
+      return AppLocalizations.of(context)!.firebaseInvalidIDToken;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kWeakPassword)) {
-      return SuperTranslations.of.firebaseWeakPassword;
+      return AppLocalizations.of(context)!.firebaseWeakPassword;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kCredentialTooOldLoginAgain)) {
-      return SuperTranslations.of.firebaseCredentialTooOldLoginAgain;
+      return AppLocalizations.of(context)!.firebaseCredentialTooOldLoginAgain;
     } else if (message
         .toString()
         .toUpperCase()
         .replaceAll('-', '_')
         .contains(kFederatedUserIDAlreadyLinked)) {
-      return SuperTranslations.of.firebaseFederatedUserIDAlreadyLinked;
+      return AppLocalizations.of(context)!.firebaseFederatedUserIDAlreadyLinked;
     } else {
       return message.toString();
     }
