@@ -12,10 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  super_localizations:
-    git:
-      url: https://github.com/OTF-7/Super-Localizations.git
-
   super_repository:
     git:
       url: https://github.com/OTF-7/Super-Repository.git
