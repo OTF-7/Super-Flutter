@@ -18,6 +18,7 @@ abstract class SuperFlutterTranslations {
 
   final String localeName;
 
-  static AppLocalizations get of => Localizations.of<AppLocalizations>(
-      navigatorKey.currentState!.context, AppLocalizations)!;
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
+  }
 }
